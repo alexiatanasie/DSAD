@@ -3,9 +3,19 @@ import pandas as pd
 
 #1
 #create a numpy.ndarray (7,7) .print result  in console
-a = np.random.randint(0, 100, (7, 7))
-print(a)
-print("\n")
+matrix = np.zeros((7, 7))
+np.fill_diagonal(matrix, 33)
+matrix[3, 3] = 77
+
+for i in range(7):
+    matrix[i, 0] = 7
+    matrix[0,0]=33
+    matrix[0, i] = 7
+    matrix[i, 6] = 7
+    matrix[6, i] = 7
+    matrix[6,6]=33
+
+print(matrix)
 
 #2
 #initialize the numpy.ndarray array
