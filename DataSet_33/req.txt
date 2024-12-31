@@ -1,0 +1,17 @@
+the DataSet_33.csv file contains records for 97 countries around the world on indicators related to the business environment, the observed variables are as follows:
+1. start-up procedures
+2.tax payments
+3. time required
+4. time to pay taxes
+5. tax rate
+6. revenue
+7. foreign investment
+8. high-tech exports
+
+1. determine and save in the StdCov.csv file the variance-covariance matrix corresponding to the standardized numerical variables of the DataSet_33.csv
+
+2. determine the principal components and save them into the PrinComp.csv file.
+
+3. Plot the variance explained by the principal components using a line plot, along a horizontal line corresponding to the variance equal to one.
+
+4. determine the factor loading matrix and plot the correlogram along with the factor loading values(2 decimal precision), employing the heatmap plot from the seaborn package.
