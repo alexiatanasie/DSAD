@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.decomposition import PCA
 import seaborn as sb
 import matplotlib.pyplot as plt
-from factor_analyzer import FactorAnalyzer
+from factor_analyzer import FactorAnalyzer, calculate_kmo
 
 #load the dataset
 dataset_file="DataSet_33.csv"
@@ -46,6 +46,12 @@ plt.show()
 #use Seaborn for heatmap
 #import from factor_analyzer import FactorAnalyzer, calculate_kmo si SEABORN
 
+#perform KMO test to check suitability for efa ???
+kmo_value,kmo_model=calculate_kmo(df_standardized)
+if kmo_model<0.6:
+    print(kmo_model, "KMO measure is too low")
+else:
+    print(kmo_model,"KMO acceptable")
 
 
 #perform factor analysis
